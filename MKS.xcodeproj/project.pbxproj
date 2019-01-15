@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43EDED8F2140E57000FF0FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EDED8E2140E57000FF0FC2 /* AppDelegate.swift */; };
+		43EDED912140E57000FF0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EDED902140E57000FF0FC2 /* Assets.xcassets */; };
+		43EDED942140E57000FF0FC2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43EDED922140E57000FF0FC2 /* MainMenu.xib */; };
+		43EDEDB6214321D700FF0FC2 /* sysmenuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB5214321D700FF0FC2 /* sysmenuicon.png */; };
+		43EDEDBD2145BA1500FF0FC2 /* click-set-enter-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB72145BA1500FF0FC2 /* click-set-enter-down.wav */; };
+		43EDEDBE2145BA1500FF0FC2 /* click-set-enter-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB82145BA1500FF0FC2 /* click-set-enter-up.wav */; };
+		43EDEDBF2145BA1500FF0FC2 /* click-set-normal-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB92145BA1500FF0FC2 /* click-set-normal-down.wav */; };
+		43EDEDC02145BA1500FF0FC2 /* click-set-normal-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDBA2145BA1500FF0FC2 /* click-set-normal-up.wav */; };
+		43EDEDC12145BA1500FF0FC2 /* click-set-space-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDBB2145BA1500FF0FC2 /* click-set-space-down.wav */; };
+		43EDEDC22145BA1500FF0FC2 /* click-set-space-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDBC2145BA1500FF0FC2 /* click-set-space-up.wav */; };
+		43EDEDC72145BA2B00FF0FC2 /* keySoundLargeDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC32145BA2B00FF0FC2 /* keySoundLargeDown.wav */; };
+		43EDEDC82145BA2B00FF0FC2 /* keySoundLargeUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC42145BA2B00FF0FC2 /* keySoundLargeUp.wav */; };
+		43EDEDC92145BA2B00FF0FC2 /* keySoundNormDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC52145BA2B00FF0FC2 /* keySoundNormDown.wav */; };
+		43EDEDCA2145BA2B00FF0FC2 /* keySoundNormUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC62145BA2B00FF0FC2 /* keySoundNormUp.wav */; };
+		43EDEDD12145C1F600FF0FC2 /* tap-set-enter-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCB2145C1F600FF0FC2 /* tap-set-enter-down.wav */; };
+		43EDEDD22145C1F600FF0FC2 /* tap-set-enter-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCC2145C1F600FF0FC2 /* tap-set-enter-up.wav */; };
+		43EDEDD32145C1F600FF0FC2 /* tap-set-normal-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCD2145C1F600FF0FC2 /* tap-set-normal-down.wav */; };
+		43EDEDD42145C1F600FF0FC2 /* tap-set-normal-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCE2145C1F600FF0FC2 /* tap-set-normal-up.wav */; };
+		43EDEDD52145C1F600FF0FC2 /* tap-set-space-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCF2145C1F600FF0FC2 /* tap-set-space-down.wav */; };
+		43EDEDD62145C1F600FF0FC2 /* tap-set-space-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDD02145C1F600FF0FC2 /* tap-set-space-up.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43EDED8B2140E57000FF0FC2 /* MKS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43EDED8E2140E57000FF0FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43EDED902140E57000FF0FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43EDED932140E57000FF0FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		43EDED952140E57000FF0FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43EDEDB5214321D700FF0FC2 /* sysmenuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sysmenuicon.png; path = AppIcon.appiconset/sysmenuicon.png; sourceTree = "<group>"; };
+		43EDEDB72145BA1500FF0FC2 /* click-set-enter-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-enter-down.wav"; path = "Sounds/click-set-enter-down.wav"; sourceTree = "<group>"; };
+		43EDEDB82145BA1500FF0FC2 /* click-set-enter-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-enter-up.wav"; path = "Sounds/click-set-enter-up.wav"; sourceTree = "<group>"; };
+		43EDEDB92145BA1500FF0FC2 /* click-set-normal-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-normal-down.wav"; path = "Sounds/click-set-normal-down.wav"; sourceTree = "<group>"; };
+		43EDEDBA2145BA1500FF0FC2 /* click-set-normal-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-normal-up.wav"; path = "Sounds/click-set-normal-up.wav"; sourceTree = "<group>"; };
+		43EDEDBB2145BA1500FF0FC2 /* click-set-space-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-space-down.wav"; path = "Sounds/click-set-space-down.wav"; sourceTree = "<group>"; };
+		43EDEDBC2145BA1500FF0FC2 /* click-set-space-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-space-up.wav"; path = "Sounds/click-set-space-up.wav"; sourceTree = "<group>"; };
+		43EDEDC32145BA2B00FF0FC2 /* keySoundLargeDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundLargeDown.wav; path = Sounds/keySoundLargeDown.wav; sourceTree = "<group>"; };
+		43EDEDC42145BA2B00FF0FC2 /* keySoundLargeUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundLargeUp.wav; path = Sounds/keySoundLargeUp.wav; sourceTree = "<group>"; };
+		43EDEDC52145BA2B00FF0FC2 /* keySoundNormDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundNormDown.wav; path = Sounds/keySoundNormDown.wav; sourceTree = "<group>"; };
+		43EDEDC62145BA2B00FF0FC2 /* keySoundNormUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundNormUp.wav; path = Sounds/keySoundNormUp.wav; sourceTree = "<group>"; };
+		43EDEDCB2145C1F600FF0FC2 /* tap-set-enter-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-enter-down.wav"; path = "Sounds/tap-set-enter-down.wav"; sourceTree = "<group>"; };
+		43EDEDCC2145C1F600FF0FC2 /* tap-set-enter-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-enter-up.wav"; path = "Sounds/tap-set-enter-up.wav"; sourceTree = "<group>"; };
+		43EDEDCD2145C1F600FF0FC2 /* tap-set-normal-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-normal-down.wav"; path = "Sounds/tap-set-normal-down.wav"; sourceTree = "<group>"; };
+		43EDEDCE2145C1F600FF0FC2 /* tap-set-normal-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-normal-up.wav"; path = "Sounds/tap-set-normal-up.wav"; sourceTree = "<group>"; };
+		43EDEDCF2145C1F600FF0FC2 /* tap-set-space-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-space-down.wav"; path = "Sounds/tap-set-space-down.wav"; sourceTree = "<group>"; };
+		43EDEDD02145C1F600FF0FC2 /* tap-set-space-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-space-up.wav"; path = "Sounds/tap-set-space-up.wav"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43EDED882140E57000FF0FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43EDED822140E57000FF0FC2 = {
+			isa = PBXGroup;
+			children = (
+				43EDED8D2140E57000FF0FC2 /* MKS */,
+				43EDED8C2140E57000FF0FC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43EDED8C2140E57000FF0FC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43EDED8B2140E57000FF0FC2 /* MKS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43EDED8D2140E57000FF0FC2 /* MKS */ = {
+			isa = PBXGroup;
+			children = (
+				43EDEDAA214317EF00FF0FC2 /* Images */,
+				43EDEDA32141C93D00FF0FC2 /* Sounds */,
+				43EDED8E2140E57000FF0FC2 /* AppDelegate.swift */,
+				43EDED902140E57000FF0FC2 /* Assets.xcassets */,
+				43EDED922140E57000FF0FC2 /* MainMenu.xib */,
+				43EDED952140E57000FF0FC2 /* Info.plist */,
+			);
+			path = MKS;
+			sourceTree = "<group>";
+		};
+		43EDEDA32141C93D00FF0FC2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				43EDEDCB2145C1F600FF0FC2 /* tap-set-enter-down.wav */,
+				43EDEDCC2145C1F600FF0FC2 /* tap-set-enter-up.wav */,
+				43EDEDCD2145C1F600FF0FC2 /* tap-set-normal-down.wav */,
+				43EDEDCE2145C1F600FF0FC2 /* tap-set-normal-up.wav */,
+				43EDEDCF2145C1F600FF0FC2 /* tap-set-space-down.wav */,
+				43EDEDD02145C1F600FF0FC2 /* tap-set-space-up.wav */,
+				43EDEDC32145BA2B00FF0FC2 /* keySoundLargeDown.wav */,
+				43EDEDC42145BA2B00FF0FC2 /* keySoundLargeUp.wav */,
+				43EDEDC52145BA2B00FF0FC2 /* keySoundNormDown.wav */,
+				43EDEDC62145BA2B00FF0FC2 /* keySoundNormUp.wav */,
+				43EDEDB72145BA1500FF0FC2 /* click-set-enter-down.wav */,
+				43EDEDB82145BA1500FF0FC2 /* click-set-enter-up.wav */,
+				43EDEDB92145BA1500FF0FC2 /* click-set-normal-down.wav */,
+				43EDEDBA2145BA1500FF0FC2 /* click-set-normal-up.wav */,
+				43EDEDBB2145BA1500FF0FC2 /* click-set-space-down.wav */,
+				43EDEDBC2145BA1500FF0FC2 /* click-set-space-up.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		43EDEDAA214317EF00FF0FC2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				43EDEDB5214321D700FF0FC2 /* sysmenuicon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43EDED8A2140E57000FF0FC2 /* MKS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EDED982140E57000FF0FC2 /* Build configuration list for PBXNativeTarget "MKS" */;
+			buildPhases = (
+				43EDED872140E57000FF0FC2 /* Sources */,
+				43EDED882140E57000FF0FC2 /* Frameworks */,
+				43EDED892140E57000FF0FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MKS;
+			productName = MechKey;
+			productReference = 43EDED8B2140E57000FF0FC2 /* MKS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43EDED832140E57000FF0FC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Bogdan Ryabyshchuk";
+				TargetAttributes = {
+					43EDED8A2140E57000FF0FC2 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 43EDED862140E57000FF0FC2 /* Build configuration list for PBXProject "MKS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43EDED822140E57000FF0FC2;
+			productRefGroup = 43EDED8C2140E57000FF0FC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43EDED8A2140E57000FF0FC2 /* MKS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43EDED892140E57000FF0FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EDEDD12145C1F600FF0FC2 /* tap-set-enter-down.wav in Resources */,
+				43EDEDD42145C1F600FF0FC2 /* tap-set-normal-up.wav in Resources */,
+				43EDEDC72145BA2B00FF0FC2 /* keySoundLargeDown.wav in Resources */,
+				43EDEDC22145BA1500FF0FC2 /* click-set-space-up.wav in Resources */,
+				43EDEDCA2145BA2B00FF0FC2 /* keySoundNormUp.wav in Resources */,
+				43EDEDC02145BA1500FF0FC2 /* click-set-normal-up.wav in Resources */,
+				43EDEDD52145C1F600FF0FC2 /* tap-set-space-down.wav in Resources */,
+				43EDEDD22145C1F600FF0FC2 /* tap-set-enter-up.wav in Resources */,
+				43EDEDC82145BA2B00FF0FC2 /* keySoundLargeUp.wav in Resources */,
+				43EDEDB6214321D700FF0FC2 /* sysmenuicon.png in Resources */,
+				43EDEDBD2145BA1500FF0FC2 /* click-set-enter-down.wav in Resources */,
+				43EDED912140E57000FF0FC2 /* Assets.xcassets in Resources */,
+				43EDED942140E57000FF0FC2 /* MainMenu.xib in Resources */,
+				43EDEDC12145BA1500FF0FC2 /* click-set-space-down.wav in Resources */,
+				43EDEDD32145C1F600FF0FC2 /* tap-set-normal-down.wav in Resources */,
+				43EDEDBE2145BA1500FF0FC2 /* click-set-enter-up.wav in Resources */,
+				43EDEDD62145C1F600FF0FC2 /* tap-set-space-up.wav in Resources */,
+				43EDEDC92145BA2B00FF0FC2 /* keySoundNormDown.wav in Resources */,
+				43EDEDBF2145BA1500FF0FC2 /* click-set-normal-down.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43EDED872140E57000FF0FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43EDED8F2140E57000FF0FC2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43EDED922140E57000FF0FC2 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43EDED932140E57000FF0FC2 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43EDED962140E57000FF0FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		43EDED972140E57000FF0FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		43EDED992140E57000FF0FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/MKS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zynath.MKS;
+				PRODUCT_NAME = MKS;
+			};
+			name = Debug;
+		};
+		43EDED9A2140E57000FF0FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/MKS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zynath.MKS;
+				PRODUCT_NAME = MKS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43EDED862140E57000FF0FC2 /* Build configuration list for PBXProject "MKS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EDED962140E57000FF0FC2 /* Debug */,
+				43EDED972140E57000FF0FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43EDED982140E57000FF0FC2 /* Build configuration list for PBXNativeTarget "MKS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EDED992140E57000FF0FC2 /* Debug */,
+				43EDED9A2140E57000FF0FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43EDED832140E57000FF0FC2 /* Project object */;
+}
