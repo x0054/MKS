@@ -327,6 +327,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func playSoundForKey(key: Int, keyIsDown down: Bool){
         
+        func play( _ player: AVAudioPlayer, at keyLocation: Float ){
+            if !player.isPlaying {
+                // Randomize pitch.
+                player.enableRate = true
+                player.rate = Float.random(in: 0.9 ... 1.1 )
+                
+                // Slightly randomize volume.
+                player.volume = Float.random(in: 0.95 ... 1.0 )
+                
+                // Adjust the pan to reflect the actual keyboard location.
+                player.pan = keyLocation
+                
+                // Play!
+                player.play()
+            }
+        }
+        
         var keyLocation: Float = 0
         var keySound: Int = 0
         
@@ -337,10 +354,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if down {
             if let player = self.players[keySound]?.0[(self.playersCurrentPlayer[keySound]?.0)!]{
-                if !player.isPlaying {
-                    player.pan = keyLocation
-                    player.play()
-                }
+                play( player, at: keyLocation )
             }
             self.playersCurrentPlayer[keySound]?.0 += 1
             if (self.playersCurrentPlayer[keySound]?.0)! >= self.playersMax {
@@ -348,10 +362,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         } else if self.keyUpSound {
             if let player = self.players[keySound]?.1[(self.playersCurrentPlayer[keySound]?.1)!]{
-                if !player.isPlaying {
-                    player.pan = keyLocation
-                    player.play()
-                }
+                play( player, at: keyLocation )
             }
             self.playersCurrentPlayer[keySound]?.1 += 1
             if (self.playersCurrentPlayer[keySound]?.1)! >= self.playersMax {
