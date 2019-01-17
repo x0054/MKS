@@ -45,6 +45,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var keyUpSound = true
     
+    var keyRandomize = false
+    
     // Other Variables
     var menuItem:NSStatusItem? = nil
     
@@ -53,24 +55,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: Start and Exit Functions
     func applicationDidFinishLaunching(_ notification: Notification) {
-        print("stage1")
         // Load Settings
         volumeLoad()
         modKeyMutedLoad()
         stereoWidthLoad()
         profileLoad()
         keyUpSoundLoad()
-        
-        print("stage2")
+        keyRandomizeLoad()
+        volumeUpdate()
         
         // Create the Menu
         menuCreate()
         
-        print("stage3")
         // Check for Permissions
         checkPrivecyAccess()
         
-        print("stage4")
         // Add Key Listeners
         loadKeyListeners()
     }
@@ -335,12 +334,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             keySound = keySetings[1]
         }
         
+        func play(player: AVAudioPlayer, keyLocation: Float){
+            if !player.isPlaying {
+                // Randomize pitch and Sound.
+                if self.keyRandomize {
+                    // Randomize Pitch
+                    player.enableRate = true
+                    player.rate = Float.random(in: 0.9 ... 1.1 )
+                    
+                    // Randomize Volume
+                    player.volume = self.volumeLevel * Float.random(in: 0.95 ... 1.0 )
+                }
+                
+                // Set the Location of the Key and Play the sound
+                player.pan = keyLocation
+                player.play()
+            }
+        }
+        
         if down {
             if let player = self.players[keySound]?.0[(self.playersCurrentPlayer[keySound]?.0)!]{
-                if !player.isPlaying {
-                    player.pan = keyLocation
-                    player.play()
-                }
+                play(player: player, keyLocation: keyLocation)
             }
             self.playersCurrentPlayer[keySound]?.0 += 1
             if (self.playersCurrentPlayer[keySound]?.0)! >= self.playersMax {
@@ -348,10 +362,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         } else if self.keyUpSound {
             if let player = self.players[keySound]?.1[(self.playersCurrentPlayer[keySound]?.1)!]{
-                if !player.isPlaying {
-                    player.pan = keyLocation
-                    player.play()
-                }
+                play(player: player, keyLocation: keyLocation)
             }
             self.playersCurrentPlayer[keySound]?.1 += 1
             if (self.playersCurrentPlayer[keySound]?.1)! >= self.playersMax {
@@ -373,6 +384,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let menuItemKeyUpOn = NSMenuItem(title: "Keyup Sound On", action: #selector(menuKeyupSoundOn), keyEquivalent: "")
     let menuItemKeyUpOff = NSMenuItem(title: "Keyup Sound Off", action: #selector(menuKeyupSoundOff), keyEquivalent: "")
+    
+    let menuItemRandomizeOn = NSMenuItem(title: "Randomize Pitch On", action: #selector(menuRandomizeOn), keyEquivalent: "")
+    let menuItemRandomizeOff = NSMenuItem(title: "Randomize Pitch Off", action: #selector(menuRandomizeOff), keyEquivalent: "")
     
     let menuItemProfile0 = NSMenuItem(title: "Tappy Profile 1", action: #selector(menuProfile0), keyEquivalent: "")
     let menuItemProfile1 = NSMenuItem(title: "Tappy Profile 2", action: #selector(menuProfile1), keyEquivalent: "")
@@ -411,6 +425,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem.separator())
         menu.addItem(self.menuItemKeyUpOn)
         menu.addItem(self.menuItemKeyUpOff)
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(self.menuItemRandomizeOn)
+        menu.addItem(self.menuItemRandomizeOff)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(self.menuItemProfile0)
         menu.addItem(self.menuItemProfile1)
@@ -466,6 +483,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         keyUpSoundSet(on: false)
     }
     
+    @objc func menuRandomizeOn(){
+        keyRandomizeSet(on: true)
+    }
+    
+    @objc func menuRandomizeOff(){
+        keyRandomizeSet(on: false)
+    }
+    
     @objc func menuProfile0(){
         profileSet(profile: 0)
     }
@@ -515,9 +540,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         for (_, players) in self.players{
             for player in players.0 {
                 player?.volume = self.volumeLevel
+                player?.enableRate = false
+                player?.rate = 1
             }
             for player in players.1 {
                 player?.volume = self.volumeLevel
+                player?.enableRate = false
+                player?.rate = 1
             }
         }
         
@@ -617,6 +646,34 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             menuItemKeyUpOn.state = NSControl.StateValue.off
             menuItemKeyUpOff.state = NSControl.StateValue.on
+        }
+    }
+    
+    // MARK: Randomize Sound Setting
+    
+    func keyRandomizeLoad() {
+        if UserDefaults.standard.object(forKey: "keyRandomize") != nil {
+            self.keyRandomize = UserDefaults.standard.bool(forKey: "keyRandomize")
+        }
+        keyRandomizeUpdate()
+    }
+    
+    func keyRandomizeSet(on: Bool) {
+        self.keyRandomize = on
+        UserDefaults.standard.set(self.keyRandomize, forKey: "keyRandomize")
+        UserDefaults.standard.synchronize()
+        keyRandomizeUpdate()
+    }
+    
+    func keyRandomizeUpdate() {
+        if self.keyRandomize {
+            menuItemRandomizeOn.state = NSControl.StateValue.on
+            menuItemRandomizeOff.state = NSControl.StateValue.off
+        } else {
+            menuItemRandomizeOn.state = NSControl.StateValue.off
+            menuItemRandomizeOff.state = NSControl.StateValue.on
+            // Update the preset Volume and Rates
+            volumeUpdate()
         }
     }
     
