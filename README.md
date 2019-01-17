@@ -19,10 +19,10 @@ Give it a try, see what you think. I think you are going to love it, and since i
 
 ## Installation
 
-1. Download KMS,dmg from the releases tab above.
-2. Open the KMS,dmg and drag KMS app to the Application folder on your dock.
+1. Download MKS.dmg from the releases tab above.
+2. Open the MKS.dmg and drag MKS app to the Application folder on your dock.
 3. To work the app needs Accessibilities permissions. To give the app permissions, open System Preferences > Security & Privacy > Privacy > Accessibility, click on the Padlock in the bottom left hand corner, and drag the MKS app into the list. That’s all.
-4. Now start KMS. It will add an icon to the System Bar. Play with the options and Enjoy!
+4. Now start MKS. It will add an icon to the System Bar. Play with the options and Enjoy!
 
 ## License
 
