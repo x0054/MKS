@@ -38,9 +38,24 @@ love it too. :)
 
 ## Installation
 
-1. Download [MKS.dmg](https://github.com/x0054/MKS/releases/latest) from the
+### Brew
+
+1. Install [brew](https://brew.sh/).
+1. Run:
+
+        $ brew cask install mks
+
+1. Grant Accessibility permissions (see below).
+
+### Manual
+
+1. Download the [MKS.dmg](https://github.com/x0054/MKS/releases/latest) from the
    releases tab above.
 1. Open the MKS.dmg and drag MKS app to the Application folder on your dock.
+1. Grant Accessibility permissions (see below).
+
+### Grant Accessibility permissions
+
 1. To work the app needs Accessibilities permissions. To give the app
    permissions:
 
