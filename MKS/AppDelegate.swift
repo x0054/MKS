@@ -373,6 +373,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: System Menu Setup
     let menuItemVolumeMute = NSMenuItem(title: "Mute Keys", action: #selector(menuSetVolMute), keyEquivalent: "")
+    let menuItemVolume10 = NSMenuItem(title: "10% Volume", action: #selector(menuSetVol0), keyEquivalent: "")
     let menuItemVolume25 = NSMenuItem(title: "25% Volume", action: #selector(menuSetVol1), keyEquivalent: "")
     let menuItemVolume50 = NSMenuItem(title: "50% Volume", action: #selector(menuSetVol2), keyEquivalent: "")
     let menuItemVolume75 = NSMenuItem(title: "75% Volume", action: #selector(menuSetVol3), keyEquivalent: "")
@@ -412,6 +413,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let menu = NSMenu()
         menu.addItem(self.menuItemVolumeMute)
+        menu.addItem(self.menuItemVolume10)
         menu.addItem(self.menuItemVolume25)
         menu.addItem(self.menuItemVolume50)
         menu.addItem(self.menuItemVolume75)
@@ -441,6 +443,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func menuSetVolMute(){
         volumeSet(vol: self.volumeLevel, muted: true)
+    }
+    
+    @objc func menuSetVol0(){
+        volumeSet(vol: 0.10, muted: false)
     }
     
     @objc func menuSetVol1(){
@@ -552,6 +558,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Update Menu to Match the Setting
         self.menuItemVolumeMute.state = NSControl.StateValue.off
+        self.menuItemVolume10.state = NSControl.StateValue.off
         self.menuItemVolume25.state = NSControl.StateValue.off
         self.menuItemVolume50.state = NSControl.StateValue.off
         self.menuItemVolume75.state = NSControl.StateValue.off
@@ -559,6 +566,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         if self.volumeMuted {
             self.menuItemVolumeMute.state = NSControl.StateValue.on
+        } else if self.volumeLevel == 0.10 {
+            self.menuItemVolume10.state = NSControl.StateValue.on
         } else if self.volumeLevel == 0.25 {
             self.menuItemVolume25.state = NSControl.StateValue.on
         } else if self.volumeLevel == 0.50 {
