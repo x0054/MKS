@@ -69,6 +69,4 @@ love it too. :)
 
 ## License
 
-I am releasing this app under the MIT license# MKS: Mechanical Keyboard Simulator
-
-Do you love the sweet sound of a mechanical keyboard with those Cherry MX Blue
+I am releasing this app under the MIT license.
