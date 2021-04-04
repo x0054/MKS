@@ -11,22 +11,28 @@
 		43EDED912140E57000FF0FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43EDED902140E57000FF0FC2 /* Assets.xcassets */; };
 		43EDED942140E57000FF0FC2 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43EDED922140E57000FF0FC2 /* MainMenu.xib */; };
 		43EDEDB6214321D700FF0FC2 /* sysmenuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB5214321D700FF0FC2 /* sysmenuicon.png */; };
-		43EDEDBD2145BA1500FF0FC2 /* click-set-enter-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB72145BA1500FF0FC2 /* click-set-enter-down.wav */; };
-		43EDEDBE2145BA1500FF0FC2 /* click-set-enter-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB82145BA1500FF0FC2 /* click-set-enter-up.wav */; };
-		43EDEDBF2145BA1500FF0FC2 /* click-set-normal-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDB92145BA1500FF0FC2 /* click-set-normal-down.wav */; };
-		43EDEDC02145BA1500FF0FC2 /* click-set-normal-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDBA2145BA1500FF0FC2 /* click-set-normal-up.wav */; };
-		43EDEDC12145BA1500FF0FC2 /* click-set-space-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDBB2145BA1500FF0FC2 /* click-set-space-down.wav */; };
-		43EDEDC22145BA1500FF0FC2 /* click-set-space-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDBC2145BA1500FF0FC2 /* click-set-space-up.wav */; };
-		43EDEDC72145BA2B00FF0FC2 /* keySoundLargeDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC32145BA2B00FF0FC2 /* keySoundLargeDown.wav */; };
-		43EDEDC82145BA2B00FF0FC2 /* keySoundLargeUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC42145BA2B00FF0FC2 /* keySoundLargeUp.wav */; };
-		43EDEDC92145BA2B00FF0FC2 /* keySoundNormDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC52145BA2B00FF0FC2 /* keySoundNormDown.wav */; };
-		43EDEDCA2145BA2B00FF0FC2 /* keySoundNormUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDC62145BA2B00FF0FC2 /* keySoundNormUp.wav */; };
-		43EDEDD12145C1F600FF0FC2 /* tap-set-enter-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCB2145C1F600FF0FC2 /* tap-set-enter-down.wav */; };
-		43EDEDD22145C1F600FF0FC2 /* tap-set-enter-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCC2145C1F600FF0FC2 /* tap-set-enter-up.wav */; };
-		43EDEDD32145C1F600FF0FC2 /* tap-set-normal-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCD2145C1F600FF0FC2 /* tap-set-normal-down.wav */; };
-		43EDEDD42145C1F600FF0FC2 /* tap-set-normal-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCE2145C1F600FF0FC2 /* tap-set-normal-up.wav */; };
-		43EDEDD52145C1F600FF0FC2 /* tap-set-space-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDCF2145C1F600FF0FC2 /* tap-set-space-down.wav */; };
-		43EDEDD62145C1F600FF0FC2 /* tap-set-space-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43EDEDD02145C1F600FF0FC2 /* tap-set-space-up.wav */; };
+		43F0C4BA261A159E008C1D1D /* profile-1-large-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4A4261A159D008C1D1D /* profile-1-large-up.wav */; };
+		43F0C4BB261A159E008C1D1D /* profile-2-enter-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4A5261A159D008C1D1D /* profile-2-enter-down.wav */; };
+		43F0C4BC261A159E008C1D1D /* profile-1-large-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4A6261A159D008C1D1D /* profile-1-large-down.wav */; };
+		43F0C4BD261A159E008C1D1D /* profile-2-large-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4A7261A159D008C1D1D /* profile-2-large-down.wav */; };
+		43F0C4BE261A159E008C1D1D /* profile-2-normal-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4A8261A159D008C1D1D /* profile-2-normal-down.wav */; };
+		43F0C4BF261A159E008C1D1D /* profile-3-mouse-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4A9261A159D008C1D1D /* profile-3-mouse-up.wav */; };
+		43F0C4C0261A159E008C1D1D /* profile-3-enter-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4AA261A159D008C1D1D /* profile-3-enter-up.wav */; };
+		43F0C4C1261A159E008C1D1D /* profile-3-normal-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4AB261A159D008C1D1D /* profile-3-normal-up.wav */; };
+		43F0C4C2261A159E008C1D1D /* profile-2-mouse-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4AC261A159D008C1D1D /* profile-2-mouse-down.wav */; };
+		43F0C4C3261A159E008C1D1D /* profile-2-large-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4AD261A159D008C1D1D /* profile-2-large-up.wav */; };
+		43F0C4C4261A159E008C1D1D /* profile-2-mouse-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4AE261A159D008C1D1D /* profile-2-mouse-up.wav */; };
+		43F0C4C5261A159E008C1D1D /* profile-2-normal-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4AF261A159D008C1D1D /* profile-2-normal-up.wav */; };
+		43F0C4C6261A159E008C1D1D /* profile-3-enter-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B0261A159D008C1D1D /* profile-3-enter-down.wav */; };
+		43F0C4C7261A159E008C1D1D /* profile-3-normal-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B1261A159D008C1D1D /* profile-3-normal-down.wav */; };
+		43F0C4C8261A159E008C1D1D /* profile-1-mouse-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B2261A159D008C1D1D /* profile-1-mouse-up.wav */; };
+		43F0C4C9261A159E008C1D1D /* profile-1-mouse-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B3261A159E008C1D1D /* profile-1-mouse-down.wav */; };
+		43F0C4CA261A159E008C1D1D /* profile-2-enter-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B4261A159E008C1D1D /* profile-2-enter-up.wav */; };
+		43F0C4CB261A159E008C1D1D /* profile-1-normal-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B5261A159E008C1D1D /* profile-1-normal-up.wav */; };
+		43F0C4CC261A159E008C1D1D /* profile-1-normal-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B6261A159E008C1D1D /* profile-1-normal-down.wav */; };
+		43F0C4CD261A159E008C1D1D /* profile-3-large-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B7261A159E008C1D1D /* profile-3-large-down.wav */; };
+		43F0C4CE261A159E008C1D1D /* profile-3-large-up.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B8261A159E008C1D1D /* profile-3-large-up.wav */; };
+		43F0C4CF261A159E008C1D1D /* profile-3-mouse-down.wav in Resources */ = {isa = PBXBuildFile; fileRef = 43F0C4B9261A159E008C1D1D /* profile-3-mouse-down.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,22 +42,28 @@
 		43EDED932140E57000FF0FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		43EDED952140E57000FF0FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43EDEDB5214321D700FF0FC2 /* sysmenuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sysmenuicon.png; path = AppIcon.appiconset/sysmenuicon.png; sourceTree = "<group>"; };
-		43EDEDB72145BA1500FF0FC2 /* click-set-enter-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-enter-down.wav"; path = "Sounds/click-set-enter-down.wav"; sourceTree = "<group>"; };
-		43EDEDB82145BA1500FF0FC2 /* click-set-enter-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-enter-up.wav"; path = "Sounds/click-set-enter-up.wav"; sourceTree = "<group>"; };
-		43EDEDB92145BA1500FF0FC2 /* click-set-normal-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-normal-down.wav"; path = "Sounds/click-set-normal-down.wav"; sourceTree = "<group>"; };
-		43EDEDBA2145BA1500FF0FC2 /* click-set-normal-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-normal-up.wav"; path = "Sounds/click-set-normal-up.wav"; sourceTree = "<group>"; };
-		43EDEDBB2145BA1500FF0FC2 /* click-set-space-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-space-down.wav"; path = "Sounds/click-set-space-down.wav"; sourceTree = "<group>"; };
-		43EDEDBC2145BA1500FF0FC2 /* click-set-space-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "click-set-space-up.wav"; path = "Sounds/click-set-space-up.wav"; sourceTree = "<group>"; };
-		43EDEDC32145BA2B00FF0FC2 /* keySoundLargeDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundLargeDown.wav; path = Sounds/keySoundLargeDown.wav; sourceTree = "<group>"; };
-		43EDEDC42145BA2B00FF0FC2 /* keySoundLargeUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundLargeUp.wav; path = Sounds/keySoundLargeUp.wav; sourceTree = "<group>"; };
-		43EDEDC52145BA2B00FF0FC2 /* keySoundNormDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundNormDown.wav; path = Sounds/keySoundNormDown.wav; sourceTree = "<group>"; };
-		43EDEDC62145BA2B00FF0FC2 /* keySoundNormUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = keySoundNormUp.wav; path = Sounds/keySoundNormUp.wav; sourceTree = "<group>"; };
-		43EDEDCB2145C1F600FF0FC2 /* tap-set-enter-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-enter-down.wav"; path = "Sounds/tap-set-enter-down.wav"; sourceTree = "<group>"; };
-		43EDEDCC2145C1F600FF0FC2 /* tap-set-enter-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-enter-up.wav"; path = "Sounds/tap-set-enter-up.wav"; sourceTree = "<group>"; };
-		43EDEDCD2145C1F600FF0FC2 /* tap-set-normal-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-normal-down.wav"; path = "Sounds/tap-set-normal-down.wav"; sourceTree = "<group>"; };
-		43EDEDCE2145C1F600FF0FC2 /* tap-set-normal-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-normal-up.wav"; path = "Sounds/tap-set-normal-up.wav"; sourceTree = "<group>"; };
-		43EDEDCF2145C1F600FF0FC2 /* tap-set-space-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-space-down.wav"; path = "Sounds/tap-set-space-down.wav"; sourceTree = "<group>"; };
-		43EDEDD02145C1F600FF0FC2 /* tap-set-space-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "tap-set-space-up.wav"; path = "Sounds/tap-set-space-up.wav"; sourceTree = "<group>"; };
+		43F0C4A4261A159D008C1D1D /* profile-1-large-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-1-large-up.wav"; path = "Sounds/profile-1-large-up.wav"; sourceTree = "<group>"; };
+		43F0C4A5261A159D008C1D1D /* profile-2-enter-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-enter-down.wav"; path = "Sounds/profile-2-enter-down.wav"; sourceTree = "<group>"; };
+		43F0C4A6261A159D008C1D1D /* profile-1-large-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-1-large-down.wav"; path = "Sounds/profile-1-large-down.wav"; sourceTree = "<group>"; };
+		43F0C4A7261A159D008C1D1D /* profile-2-large-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-large-down.wav"; path = "Sounds/profile-2-large-down.wav"; sourceTree = "<group>"; };
+		43F0C4A8261A159D008C1D1D /* profile-2-normal-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-normal-down.wav"; path = "Sounds/profile-2-normal-down.wav"; sourceTree = "<group>"; };
+		43F0C4A9261A159D008C1D1D /* profile-3-mouse-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-mouse-up.wav"; path = "Sounds/profile-3-mouse-up.wav"; sourceTree = "<group>"; };
+		43F0C4AA261A159D008C1D1D /* profile-3-enter-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-enter-up.wav"; path = "Sounds/profile-3-enter-up.wav"; sourceTree = "<group>"; };
+		43F0C4AB261A159D008C1D1D /* profile-3-normal-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-normal-up.wav"; path = "Sounds/profile-3-normal-up.wav"; sourceTree = "<group>"; };
+		43F0C4AC261A159D008C1D1D /* profile-2-mouse-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-mouse-down.wav"; path = "Sounds/profile-2-mouse-down.wav"; sourceTree = "<group>"; };
+		43F0C4AD261A159D008C1D1D /* profile-2-large-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-large-up.wav"; path = "Sounds/profile-2-large-up.wav"; sourceTree = "<group>"; };
+		43F0C4AE261A159D008C1D1D /* profile-2-mouse-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-mouse-up.wav"; path = "Sounds/profile-2-mouse-up.wav"; sourceTree = "<group>"; };
+		43F0C4AF261A159D008C1D1D /* profile-2-normal-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-normal-up.wav"; path = "Sounds/profile-2-normal-up.wav"; sourceTree = "<group>"; };
+		43F0C4B0261A159D008C1D1D /* profile-3-enter-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-enter-down.wav"; path = "Sounds/profile-3-enter-down.wav"; sourceTree = "<group>"; };
+		43F0C4B1261A159D008C1D1D /* profile-3-normal-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-normal-down.wav"; path = "Sounds/profile-3-normal-down.wav"; sourceTree = "<group>"; };
+		43F0C4B2261A159D008C1D1D /* profile-1-mouse-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-1-mouse-up.wav"; path = "Sounds/profile-1-mouse-up.wav"; sourceTree = "<group>"; };
+		43F0C4B3261A159E008C1D1D /* profile-1-mouse-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-1-mouse-down.wav"; path = "Sounds/profile-1-mouse-down.wav"; sourceTree = "<group>"; };
+		43F0C4B4261A159E008C1D1D /* profile-2-enter-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-2-enter-up.wav"; path = "Sounds/profile-2-enter-up.wav"; sourceTree = "<group>"; };
+		43F0C4B5261A159E008C1D1D /* profile-1-normal-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-1-normal-up.wav"; path = "Sounds/profile-1-normal-up.wav"; sourceTree = "<group>"; };
+		43F0C4B6261A159E008C1D1D /* profile-1-normal-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-1-normal-down.wav"; path = "Sounds/profile-1-normal-down.wav"; sourceTree = "<group>"; };
+		43F0C4B7261A159E008C1D1D /* profile-3-large-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-large-down.wav"; path = "Sounds/profile-3-large-down.wav"; sourceTree = "<group>"; };
+		43F0C4B8261A159E008C1D1D /* profile-3-large-up.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-large-up.wav"; path = "Sounds/profile-3-large-up.wav"; sourceTree = "<group>"; };
+		43F0C4B9261A159E008C1D1D /* profile-3-mouse-down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "profile-3-mouse-down.wav"; path = "Sounds/profile-3-mouse-down.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,22 +109,28 @@
 		43EDEDA32141C93D00FF0FC2 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				43EDEDCB2145C1F600FF0FC2 /* tap-set-enter-down.wav */,
-				43EDEDCC2145C1F600FF0FC2 /* tap-set-enter-up.wav */,
-				43EDEDCD2145C1F600FF0FC2 /* tap-set-normal-down.wav */,
-				43EDEDCE2145C1F600FF0FC2 /* tap-set-normal-up.wav */,
-				43EDEDCF2145C1F600FF0FC2 /* tap-set-space-down.wav */,
-				43EDEDD02145C1F600FF0FC2 /* tap-set-space-up.wav */,
-				43EDEDC32145BA2B00FF0FC2 /* keySoundLargeDown.wav */,
-				43EDEDC42145BA2B00FF0FC2 /* keySoundLargeUp.wav */,
-				43EDEDC52145BA2B00FF0FC2 /* keySoundNormDown.wav */,
-				43EDEDC62145BA2B00FF0FC2 /* keySoundNormUp.wav */,
-				43EDEDB72145BA1500FF0FC2 /* click-set-enter-down.wav */,
-				43EDEDB82145BA1500FF0FC2 /* click-set-enter-up.wav */,
-				43EDEDB92145BA1500FF0FC2 /* click-set-normal-down.wav */,
-				43EDEDBA2145BA1500FF0FC2 /* click-set-normal-up.wav */,
-				43EDEDBB2145BA1500FF0FC2 /* click-set-space-down.wav */,
-				43EDEDBC2145BA1500FF0FC2 /* click-set-space-up.wav */,
+				43F0C4A6261A159D008C1D1D /* profile-1-large-down.wav */,
+				43F0C4A4261A159D008C1D1D /* profile-1-large-up.wav */,
+				43F0C4B3261A159E008C1D1D /* profile-1-mouse-down.wav */,
+				43F0C4B2261A159D008C1D1D /* profile-1-mouse-up.wav */,
+				43F0C4B6261A159E008C1D1D /* profile-1-normal-down.wav */,
+				43F0C4B5261A159E008C1D1D /* profile-1-normal-up.wav */,
+				43F0C4A5261A159D008C1D1D /* profile-2-enter-down.wav */,
+				43F0C4B4261A159E008C1D1D /* profile-2-enter-up.wav */,
+				43F0C4A7261A159D008C1D1D /* profile-2-large-down.wav */,
+				43F0C4AD261A159D008C1D1D /* profile-2-large-up.wav */,
+				43F0C4AC261A159D008C1D1D /* profile-2-mouse-down.wav */,
+				43F0C4AE261A159D008C1D1D /* profile-2-mouse-up.wav */,
+				43F0C4A8261A159D008C1D1D /* profile-2-normal-down.wav */,
+				43F0C4AF261A159D008C1D1D /* profile-2-normal-up.wav */,
+				43F0C4B0261A159D008C1D1D /* profile-3-enter-down.wav */,
+				43F0C4AA261A159D008C1D1D /* profile-3-enter-up.wav */,
+				43F0C4B7261A159E008C1D1D /* profile-3-large-down.wav */,
+				43F0C4B8261A159E008C1D1D /* profile-3-large-up.wav */,
+				43F0C4B9261A159E008C1D1D /* profile-3-mouse-down.wav */,
+				43F0C4A9261A159D008C1D1D /* profile-3-mouse-up.wav */,
+				43F0C4B1261A159D008C1D1D /* profile-3-normal-down.wav */,
+				43F0C4AB261A159D008C1D1D /* profile-3-normal-up.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -152,17 +170,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Bogdan Ryabyshchuk";
 				TargetAttributes = {
 					43EDED8A2140E57000FF0FC2 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7VC9H747X6;
+						LastSwiftMigration = 1100;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
 			buildConfigurationList = 43EDED862140E57000FF0FC2 /* Build configuration list for PBXProject "MKS" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -183,25 +204,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43EDEDD12145C1F600FF0FC2 /* tap-set-enter-down.wav in Resources */,
-				43EDEDD42145C1F600FF0FC2 /* tap-set-normal-up.wav in Resources */,
-				43EDEDC72145BA2B00FF0FC2 /* keySoundLargeDown.wav in Resources */,
-				43EDEDC22145BA1500FF0FC2 /* click-set-space-up.wav in Resources */,
-				43EDEDCA2145BA2B00FF0FC2 /* keySoundNormUp.wav in Resources */,
-				43EDEDC02145BA1500FF0FC2 /* click-set-normal-up.wav in Resources */,
-				43EDEDD52145C1F600FF0FC2 /* tap-set-space-down.wav in Resources */,
-				43EDEDD22145C1F600FF0FC2 /* tap-set-enter-up.wav in Resources */,
-				43EDEDC82145BA2B00FF0FC2 /* keySoundLargeUp.wav in Resources */,
+				43F0C4BF261A159E008C1D1D /* profile-3-mouse-up.wav in Resources */,
+				43F0C4C8261A159E008C1D1D /* profile-1-mouse-up.wav in Resources */,
+				43F0C4BE261A159E008C1D1D /* profile-2-normal-down.wav in Resources */,
+				43F0C4BC261A159E008C1D1D /* profile-1-large-down.wav in Resources */,
+				43F0C4C2261A159E008C1D1D /* profile-2-mouse-down.wav in Resources */,
 				43EDEDB6214321D700FF0FC2 /* sysmenuicon.png in Resources */,
-				43EDEDBD2145BA1500FF0FC2 /* click-set-enter-down.wav in Resources */,
+				43F0C4C6261A159E008C1D1D /* profile-3-enter-down.wav in Resources */,
+				43F0C4CB261A159E008C1D1D /* profile-1-normal-up.wav in Resources */,
+				43F0C4CD261A159E008C1D1D /* profile-3-large-down.wav in Resources */,
+				43F0C4C3261A159E008C1D1D /* profile-2-large-up.wav in Resources */,
+				43F0C4BB261A159E008C1D1D /* profile-2-enter-down.wav in Resources */,
+				43F0C4C5261A159E008C1D1D /* profile-2-normal-up.wav in Resources */,
 				43EDED912140E57000FF0FC2 /* Assets.xcassets in Resources */,
+				43F0C4C1261A159E008C1D1D /* profile-3-normal-up.wav in Resources */,
+				43F0C4CC261A159E008C1D1D /* profile-1-normal-down.wav in Resources */,
 				43EDED942140E57000FF0FC2 /* MainMenu.xib in Resources */,
-				43EDEDC12145BA1500FF0FC2 /* click-set-space-down.wav in Resources */,
-				43EDEDD32145C1F600FF0FC2 /* tap-set-normal-down.wav in Resources */,
-				43EDEDBE2145BA1500FF0FC2 /* click-set-enter-up.wav in Resources */,
-				43EDEDD62145C1F600FF0FC2 /* tap-set-space-up.wav in Resources */,
-				43EDEDC92145BA2B00FF0FC2 /* keySoundNormDown.wav in Resources */,
-				43EDEDBF2145BA1500FF0FC2 /* click-set-normal-down.wav in Resources */,
+				43F0C4C4261A159E008C1D1D /* profile-2-mouse-up.wav in Resources */,
+				43F0C4BD261A159E008C1D1D /* profile-2-large-down.wav in Resources */,
+				43F0C4CF261A159E008C1D1D /* profile-3-mouse-down.wav in Resources */,
+				43F0C4CA261A159E008C1D1D /* profile-2-enter-up.wav in Resources */,
+				43F0C4C9261A159E008C1D1D /* profile-1-mouse-down.wav in Resources */,
+				43F0C4C0261A159E008C1D1D /* profile-3-enter-up.wav in Resources */,
+				43F0C4CE261A159E008C1D1D /* profile-3-large-up.wav in Resources */,
+				43F0C4BA261A159E008C1D1D /* profile-1-large-up.wav in Resources */,
+				43F0C4C7261A159E008C1D1D /* profile-3-normal-down.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -258,7 +286,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Installer: Bogdan Ryabyshchuk (7VC9H747X6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -290,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -314,7 +343,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Installer: Bogdan Ryabyshchuk (7VC9H747X6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -339,12 +368,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_HARDENED_RUNTIME = NO;
+				DEVELOPMENT_TEAM = 7VC9H747X6;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MKS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zynath.MKS;
 				PRODUCT_NAME = MKS;
+				PROVISIONING_PROFILE_SPECIFIER = "MKS-Profile";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -352,12 +387,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_HARDENED_RUNTIME = NO;
+				DEVELOPMENT_TEAM = 7VC9H747X6;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MKS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zynath.MKS;
 				PRODUCT_NAME = MKS;
+				PROVISIONING_PROFILE_SPECIFIER = "MKS-Profile";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -20,15 +20,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Player Arrays and Sound Profiles    
     var profile: Int = 0
     
-    let soundFiles: [[Int: (String, String)]] = [[0: ("keySoundNormDown", "keySoundNormUp"),
-                                                  1: ("keySoundLargeDown", "keySoundLargeUp"),
-                                                  2: ("keySoundLargeDown", "keySoundLargeUp")],
-                                                 [0: ("tap-set-normal-down", "tap-set-normal-up"),
-                                                  1: ("tap-set-enter-down", "tap-set-enter-down"),
-                                                  2: ("tap-set-enter-down", "tap-set-enter-up")],
-                                                 [0: ("click-set-normal-down", "click-set-normal-up"),
-                                                  1: ("click-set-space-down", "click-set-space-up"),
-                                                  2: ("click-set-enter-down", "click-set-enter-up")]]
+    let soundFiles: [[Int: (String, String)]] = [[0: ("profile-1-normal-down", "profile-1-normal-up"),
+                                                  1: ("profile-1-large-down", "profile-1-large-up"),
+                                                  2: ("profile-1-large-down", "profile-1-large-up"),
+                                                  3: ("profile-1-mouse-down", "profile-1-mouse-up")],
+                                                 [0: ("profile-2-normal-down", "profile-2-normal-up"),
+                                                  1: ("profile-2-large-down", "profile-2-large-up"),
+                                                  2: ("profile-2-enter-down", "profile-2-enter-up"),
+                                                  3: ("profile-2-mouse-down", "profile-2-mouse-up")],
+                                                 [0: ("profile-3-normal-down", "profile-3-normal-up"),
+                                                  1: ("profile-3-large-down", "profile-3-large-up"),
+                                                  2: ("profile-3-enter-down", "profile-3-enter-up"),
+                                                  3: ("profile-3-mouse-down", "profile-3-mouse-up")]]
     
     var players: [Int: ([AVAudioPlayer?], [AVAudioPlayer?])] = [:]
     var playersCurrentPlayer: [Int: (Int, Int)] = [:]
@@ -47,6 +50,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var keyRandomize = false
     
+    var mouseEffects = true
+    
     // Other Variables
     var menuItem:NSStatusItem? = nil
     
@@ -63,6 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         keyUpSoundLoad()
         keyRandomizeLoad()
         volumeUpdate()
+        mouseEffectsLoad()
         
         // Create the Menu
         menuCreate()
@@ -74,7 +80,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         loadKeyListeners()
     }
     
-    // MARK: Key Press Listeners
+    // MARK: Event Listeners
     
     func loadKeyListeners() {
         NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.keyDown, handler: { (event) -> Void in
@@ -88,8 +94,67 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.flagsChanged, handler: { (event) -> Void in
             self.keyPressMod(event: event)
         })
+        
+        NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.leftMouseDown, handler: { (event) -> Void in
+            self.mousePressDown(event: event)
+        })
+        
+        NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.leftMouseUp, handler: { (event) -> Void in
+            self.mousePressUp(event: event)
+        })
+        
+        NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.rightMouseDown, handler: { (event) -> Void in
+            self.mousePressDown(event: event)
+        })
+        
+        NSEvent.addGlobalMonitorForEvents(matching: NSEvent.EventTypeMask.rightMouseUp, handler: { (event) -> Void in
+            self.mousePressUp(event: event)
+        })
     }
     
+    // MARK: Mouse Functions
+    var mousePrevDown: NSDate = NSDate()
+    var mousePrevUp: NSDate = NSDate()
+    
+    // Mouse Press Down Event Function
+    func mousePressDown(event:NSEvent){
+        if self.mouseEffects {
+            let timeSinceLastMouseDownEvent = mousePrevDown.timeIntervalSinceNow
+            mousePrevDown = NSDate()
+            let prevEventTooClose: Bool = (timeSinceLastMouseDownEvent >= -0.045)
+            if self.debugging {
+                if prevEventTooClose {
+                    systemMenuMessage(message: "Mouse - Too Close")
+                } else {
+                    systemMenuMessage(message: "Mouse - Ok")
+                }
+            }
+            if !volumeMuted && !prevEventTooClose {
+                playSoundForKey(key: 1000, keyIsDown: true)
+            }
+        }
+    }
+    
+    // Mouse Press Up Event Function
+    func mousePressUp(event:NSEvent){
+        if self.mouseEffects {
+            let timeSinceLastMouseUpEvent = mousePrevUp.timeIntervalSinceNow
+            mousePrevUp = NSDate()
+            let prevEventTooClose: Bool = (timeSinceLastMouseUpEvent >= -0.045)
+            if self.debugging {
+                if prevEventTooClose {
+                    systemMenuMessage(message: "Mouse - Too Close")
+                } else {
+                    systemMenuMessage(message: "Mouse - Ok")
+                }
+            }
+            if !volumeMuted && !prevEventTooClose {
+                playSoundForKey(key: 1000, keyIsDown: false)
+            }
+        }
+    }
+    
+    // MARK: Key Functions
     // Key Press Function for Normal Keys
     func keyPressDown(event:NSEvent){
         if !volumeMuted {
@@ -150,9 +215,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let timeSinceLastModKeyEvent = modKeysPrevEvent.timeIntervalSinceNow
         self.modKeysPrevEvent = NSDate()
         
-        let prevEventNotTooClose: Bool = (timeSinceLastModKeyEvent <= -0.045)
+        let prevEventTooClose: Bool = (timeSinceLastModKeyEvent <= -0.045)
         if self.debugging {
-            if prevEventNotTooClose {
+            if prevEventTooClose {
                 systemMenuMessage(message: "Too Close")
             } else {
                 systemMenuMessage(message: "Not Too Close")
@@ -163,7 +228,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let bitmask = event.modifierFlags.rawValue
         
         // Key Maps for the Keys
-        var modKeysCodes: [String: Int] = ["keyShiftRight":  60,
+        let modKeysCodes: [String: Int] = ["keyShiftRight":  60,
                                            "keyShiftLeft":   57,
                                            "keyAltLeft":     58,
                                            "keyAltRight":    61,
@@ -185,7 +250,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Create New Mod Key Array and See Which Key was Pressed or Released
         for (key, _) in self.modKeysPrev {
             modKeysCurrent[key] = (bitmask & modKeyMask[key]! == modKeyMask[key])
-            if modKeysCurrent[key] != self.modKeysPrev[key] && !self.modKeysMuted && !self.volumeMuted && prevEventNotTooClose {
+            if modKeysCurrent[key] != self.modKeysPrev[key] && !self.modKeysMuted && !self.volumeMuted && prevEventTooClose {
                 if let keyWasDown = self.modKeysPrev[key] {
                     if keyWasDown {
                         // Key was Released
@@ -213,7 +278,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Sounds are 0, 1, or 2 with 0 being normal key sounds, 1 being larger keys,
     // and all of the mod keys are 3, for a shifting like sound that I may add in the future
     
-    let keyMap: [Int: Array<Int>] =  [53:  [0,0],
+    let keyMap: [Int: Array<Int>] =  [1000:  [5,3], // Mouse Key
+                                      53:  [0,0],
                                       50:  [0,0],
                                       48:  [0,1],
                                       57:  [0,2],
@@ -304,6 +370,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         print("Failed to load \(files.0)")
                     }
                 }
+            }else{
+                print("Can't Find Sound Files \(files.0)")
             }
             var upFiles: [AVAudioPlayer?] = []
             if let soundURL = Bundle.main.url(forResource: files.1, withExtension: "wav"){
@@ -311,9 +379,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     do {
                         try upFiles.append( AVAudioPlayer(contentsOf: soundURL) )
                     } catch {
-                        print("Failed to load \(files.0)")
+                        print("Failed to load \(files.1)")
                     }
                 }
+            }else{
+                print("Can't Find Sound Files \(files.1)")
             }
             
             self.players[sound] = (downFiles, upFiles)
@@ -389,9 +459,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let menuItemRandomizeOn = NSMenuItem(title: "Randomize Pitch On", action: #selector(menuRandomizeOn), keyEquivalent: "")
     let menuItemRandomizeOff = NSMenuItem(title: "Randomize Pitch Off", action: #selector(menuRandomizeOff), keyEquivalent: "")
     
-    let menuItemProfile0 = NSMenuItem(title: "Tappy Profile 1", action: #selector(menuProfile0), keyEquivalent: "")
-    let menuItemProfile1 = NSMenuItem(title: "Tappy Profile 2", action: #selector(menuProfile1), keyEquivalent: "")
-    let menuItemProfile2 = NSMenuItem(title: "Clicky Profile", action: #selector(menuProfile2), keyEquivalent: "")
+    let menuItemProfile0 = NSMenuItem(title: "Profile 1", action: #selector(menuProfile0), keyEquivalent: "")
+    let menuItemProfile1 = NSMenuItem(title: "Profile 2", action: #selector(menuProfile1), keyEquivalent: "")
+    let menuItemProfile2 = NSMenuItem(title: "Profile 3", action: #selector(menuProfile2), keyEquivalent: "")
+    
+    let menuItemMouseEffectsOn = NSMenuItem(title: "Mouse Effects On", action: #selector(menuMouseEffectsOn), keyEquivalent: "")
+    let menuItemMouseEffectsOff = NSMenuItem(title: "Mouse Effects Off", action: #selector(menuMouseEffectsOff), keyEquivalent: "")
     
     let menuItemAbout = NSMenuItem(title: "About MKS", action: #selector(menuAbout), keyEquivalent: "")
     let menuItemQuit = NSMenuItem(title: "Quit", action: #selector(menuQuit), keyEquivalent: "")
@@ -434,6 +507,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(self.menuItemProfile0)
         menu.addItem(self.menuItemProfile1)
         menu.addItem(self.menuItemProfile2)
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(self.menuItemMouseEffectsOn)
+        menu.addItem(self.menuItemMouseEffectsOff)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(self.menuItemAbout)
         menu.addItem(self.menuItemQuit)
@@ -507,6 +583,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func menuProfile2(){
         profileSet(profile: 2)
+    }
+    
+    @objc func menuMouseEffectsOn(){
+        mouseEffectsSet(on: true)
+    }
+    
+    @objc func menuMouseEffectsOff(){
+        mouseEffectsSet(on: false)
     }
     
     @objc func menuAbout(){
@@ -655,6 +739,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             menuItemKeyUpOn.state = NSControl.StateValue.off
             menuItemKeyUpOff.state = NSControl.StateValue.on
+        }
+    }
+    
+    // MARK: Mouse Effect Settings
+    
+    func mouseEffectsLoad() {
+        if UserDefaults.standard.object(forKey: "mouseEffects") != nil {
+            self.mouseEffects = UserDefaults.standard.bool(forKey: "mouseEffects")
+        }
+        mouseEffectsUpdate()
+    }
+    
+    func mouseEffectsSet(on: Bool) {
+        self.mouseEffects = on
+        UserDefaults.standard.set(self.mouseEffects, forKey: "mouseEffects")
+        UserDefaults.standard.synchronize()
+        mouseEffectsUpdate()
+    }
+    
+    func mouseEffectsUpdate() {
+        if self.mouseEffects {
+            menuItemMouseEffectsOn.state = NSControl.StateValue.on
+            menuItemMouseEffectsOff.state = NSControl.StateValue.off
+        } else {
+            menuItemMouseEffectsOn.state = NSControl.StateValue.off
+            menuItemMouseEffectsOff.state = NSControl.StateValue.on
         }
     }
     
