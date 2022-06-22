@@ -29,7 +29,7 @@ Upon user request I added a mouse simulator as well. I was very skeptical at fir
 1. Install [brew](https://brew.sh/).
 1. Run:
 
-        $ brew cask install mks
+        $ brew install --cask mks
 
 1. Grant Accessibility permissions (see below).
 
